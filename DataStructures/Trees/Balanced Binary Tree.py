@@ -7,21 +7,13 @@ class TreeNode:
         self.right = right
 class Solution:
     def isBalanced(self, root):
-        if not root:
-            return True
-        unbalance_count = 0
-        q = deque([root])
-        while q:
-            for i in range(len(q)):
-                node = q.popleft()
-                if node.left and node.right:
-                    q.append(node.left)
-                    q.append(node.right)
-                elif node.left and not node.right:
-                    q.append(node.left)
-                    unbalance_count += 1
-                elif node.right and not node.left:
-                    q.append(node.right)
-                    unbalance_count += 1
-        return unbalance_count > 1
+        def dfs(root):
+            if not root: return [True, 0]
 
+            left, right = dfs(root.left), dfs(root.right)
+            balanced = (left[0] and right[0] and
+                       abs(left[1] - right[1]) <= 1)
+
+            return [balanced, 1 + max(left[1], right[1])]
+
+        return dfs(root)[0]
