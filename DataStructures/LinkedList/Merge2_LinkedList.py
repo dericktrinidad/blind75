@@ -21,9 +21,9 @@ class Solution:
             tail.next = list1
         elif list2:
             tail.next = list2
-
+        print(dummy.next)
         return dummy.next
 
 if __name__ == '__main__':
     s = Solution()
-    print(s.mergeTwoLists([1,2,4], [1,3,4]))
+    s.mergeTwoLists(ListNode([1,2,4]), ListNode([1,3,4]))
