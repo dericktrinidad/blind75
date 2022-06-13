@@ -30,6 +30,7 @@ class Solution2:
         head.next = None
         return newHead
 
+
 if __name__ == '__main__':
     s1 = Solution1()
     s2 = Solution2()
