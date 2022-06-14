@@ -12,4 +12,4 @@ class Solution:
 
 if __name__ == '__main__':
     s = Solution()
-    print(s.topKFrequent([1,1,1,1,2,2,2,3,3,5],2))
+    print(s.topKFrequent([1,1,1,1,2,2,2,3,3,5],3))
