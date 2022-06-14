@@ -30,7 +30,17 @@ class Solution2:
         head.next = None
         return newHead
 
+class tryme:
+    def reverseList(self, head):
+        prev, curr = None, head
 
+        while head:
+            nxt = head.next
+            head.next = prev
+            prev = curr
+            curr = nxt
+
+        return prev
 if __name__ == '__main__':
     s1 = Solution1()
     s2 = Solution2()

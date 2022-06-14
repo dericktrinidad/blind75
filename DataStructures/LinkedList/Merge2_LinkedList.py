@@ -21,7 +21,6 @@ class Solution:
             tail.next = list1
         elif list2:
             tail.next = list2
-        print(dummy.next)
         return dummy.next
 
 if __name__ == '__main__':
