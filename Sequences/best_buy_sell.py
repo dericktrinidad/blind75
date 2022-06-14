@@ -12,6 +12,8 @@ class Solution:
                 l = r
             r += 1
         return maxP
+
+
 if __name__ == '__main__':
     s = Solution()
     print(s.maxProfit([7,1,5,3,6,4]))
