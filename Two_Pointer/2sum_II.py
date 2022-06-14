@@ -11,10 +11,6 @@ class Solution:
                 return [l + 1, r + 1]
         return []
 
-
-
-
-
 if __name__ == '__main__':
     s = Solution()
     print(s.twosumII([1,3,4,5,7,11], 9))
