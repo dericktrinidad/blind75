@@ -9,7 +9,7 @@ class Solution:
         if not subRoot: return True
         if not root: return False
 
-        if self. sameTree(root, subRoot):
+        if self.sameTree(root, subRoot):
             return True
         return (self.isSubtree(root.left, subRoot) or
                 self.isSubtree(root.right, subRoot))
