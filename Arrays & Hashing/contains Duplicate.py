@@ -1,17 +1,11 @@
 class Solution:
     def containsDuplicate(self, nums):
-        mem = {}
-        bool = False
-        if len(nums) == 1:
-            return False
-        for i, value in enumerate(nums):
-            if value in mem:
-                return True
-            else:
-                bool = False
-                mem[value] = i
-        return bool
+        hashset = set()
 
+        for n in nums:
+            if n in hashset:
+                return True
+            hashset.add(n)
 if __name__ == '__main__':
     s = Solution()
     print(s.containsDuplicate([0,4,5,0,3,6]))
