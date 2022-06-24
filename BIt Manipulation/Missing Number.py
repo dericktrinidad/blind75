@@ -7,7 +7,7 @@ class Solution:
         return res
 
 if __name__ == '__main__':
-    s = Solution(),
+    s = Solution()
     print(s.missingNumber([9,6,4,2,3,5,7,0,1]))
 
 
